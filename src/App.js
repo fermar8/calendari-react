@@ -63,8 +63,10 @@ function App() {
             <strong>{d}</strong>
           </Dia>
         ))}
-        {/*Array.fill(null) omple l'inici de l'array mes 
-        amb el número que li passem de diaInici amb null*/}
+        {/*Array(array a fer servir[index del mes] Ex: normalObis[mes] + 4 - 1 = 34).fill(null) omple l'inici de l'array mes 
+        amb el número que li passem de diaInici amb null, farem servir els index de l'array amb nulls pels dies. 
+        El map fa Ex: index (0) - diaInici (4) - 2 = -2 i comenca a mapejar l'array fins el final (34-2 = 32, però el 0 no conta així que 31). 
+        [-2, -1, 0, (comensa a comptar) 1, 2, etc...3] Si dia és més gran que 0 pinta d, sino pinta ''*/}
         {/*Fem un map dels dies i passem props per styled-components css
          si dia(d) és més petit que 0 tornem '' */}
         {Array(normalOBis[mes] + (diaInici - 1))
